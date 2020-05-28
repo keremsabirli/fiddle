@@ -20,6 +20,7 @@ import { NzGridModule} from "ng-zorro-antd/grid";
 import { NzTypographyModule } from "ng-zorro-antd/typography";
 import { NzSpaceModule } from "ng-zorro-antd/space";
 import { NzSpinModule } from "ng-zorro-antd/spin";
+import { NzCardModule } from "ng-zorro-antd/card";
 registerLocaleData(en);
 
 @NgModule({
@@ -41,7 +42,8 @@ registerLocaleData(en);
     NzGridModule,
     NzTypographyModule,
     NzSpaceModule,
-    NzSpinModule
+    NzSpinModule,
+    NzCardModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
