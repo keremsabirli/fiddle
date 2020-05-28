@@ -1,0 +1,22 @@
+<nz-space>
+    <nz-space-item>
+        <input nz-input placeholder="Artist Name" [(ngModel)]="artistSearch" />
+    </nz-space-item>
+    <nz-space-item>
+        <input nz-input placeholder="Song Name" [(ngModel)]="songSearch" />
+    </nz-space-item>
+    <nz-space-item>
+        <button nz-button nzType="primary" (click)="onSearch()"><i nz-icon nzType="search"></i>Search</button>
+    </nz-space-item>
+</nz-space>
+
+<div>
+    <nz-spin nzTip="Loading..." [nzSpinning]="isLoading">
+        <div *ngIf="lyrics">
+            <h2 nz-typography>{{this.title}}</h2>
+            <p nz-typography>
+                {{lyrics}}
+            </p>
+        </div>
+    </nz-spin>
+</div>
